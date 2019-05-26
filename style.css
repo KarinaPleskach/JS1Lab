@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+body {
+    font-family: Arial;
+    font-size: 16px;
+    background: #EBEBEB;
+}
+header:after {
+    content: "";
+    display: table;
+    clear: both;
+} 
+header {
+    width: 100%;
+    background: #373C3F;
+    padding: 20px 0;
+}
+
+/* меню */
+#menu {
+    float: left;
+}
+#menu li {
+    display: inline-block;
+    margin-left: 50px;
+}
+#menu a {
+    color: #FFFFFF;
+    font-weight: 550;
+    line-height: 40px;
+}
+
+/* кнопка переключения меню, появляющаяся при ширине 738px */
+.nav-toggle {
+    display: none;
+    position: relative;
+    float: right;
+    width: 70px;
+    height: 60px;
+    background: #202529;
+    cursor: pointer;
+}
+.nav-toggle span {
+    display: block;
+    position: absolute;
+    top: 29px;
+    left: 20px;
+    right: 20px;
+    height: 4px;
+    background: white;
+}
+.nav-toggle span:before, .nav-toggle span:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: white;
+}
+.nav-toggle span:before {
+    top: -8px;
+}
+.nav-toggle span:after {
+    bottom: -8px;
+}
+/* текст навигации, появляющийся при ширине 666px */
+.nav-text {
+    display: none;
+    position: relative;
+    float: left;
+}
+.nav-text span {
+    display: block;
+    position: absolute;
+    color: #FFFFFF;
+    font-weight: 550;
+    line-height: 40px;
+    letter-spacing: 1px;
+    top: 10px;
+    left: 20px;
+}
+
+@media (max-width: 738px) {
+    .nav-toggle {
+        display: block;
+    }
+    .nav-text {
+        display: block;
+    }
+    header {
+        padding: 0;
+    }
+    #menu {
+        display: none;
+    }
+}
+
+.text {
+    background: linear-gradient(to top left, #19B4C6, #19B4C6);
+    width: 100%;
+}
+.text span, .text a {
+    display: block;
+}
+.text div {
+   padding-top: 80px; 
+   padding-left: 5%;
+   color: #FFFFFF;
+   font-weight: 500;
+   font-size: 3vmax;
+}
+.text a {
+    padding-top: 15px;
+    padding-left: 5%;
+    padding-bottom: 80px;
+    color: #B0D6E0;
+    font-size: 2vmax;
+}
+.text a::after {
+    content: ">";
+    padding-left: 12vmax;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+.pink {
+    background: #27212C;
+    width: 100%;
+    padding:0;
+}
+.pink-arrow {
+    display: block;
+    position: relative;
+    float: right;
+    width: 18vmin;
+    height: calc(80px + 2.3vmax);
+    background: #BC3183;
+    cursor: pointer;
+}
+.pink-arrow span {
+    display: block;
+    position: absolute;
+    color: #FFFFFF;
+    font-weight: 600;
+    line-height: 40px;
+    font-size: 6vmax;
+    top: 33%;
+    left: 33%;
+}
+.pink-text {
+    color: #9989A8;
+    padding-top: 40px;
+    padding-left: 5%;
+    padding-bottom: 40px;
+    font-size: 2vmax;
+}
+.imgs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
+}
+.imgs > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 640px) {
+    .imgs {
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .last {
+        margin-top: -5px;
+    }
+}
+
+.first {
+    padding-left: 5%;
+    padding-top: 35px;
+    padding-bottom: 15px;
+    color: #0189A2;
+    font-weight: 600;
+    font-size: 3.5vmax;
+    letter-spacing: 1px;
+}
+.art {
+    color: #515151;
+}
+.art div {
+    padding-bottom: 40px;
+    padding-left: 5%;
+}
+#pre, #post {
+    display: block;
+    position: relative;
+    float: left;
+    width: 45%;
+}
+article p {
+    padding-bottom: 25px;
+}
+
+@media (max-width: 640px) {
+    #pre, #post {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+    }
+}
